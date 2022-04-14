@@ -1,0 +1,29 @@
+// @import "../abstracts/variables";
+.row {
+    max-width: $grid-width;
+    background-color: #eee;
+    margin: 0 auto;
+    padding: 0;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+
+    @include clearfix;
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+
+    [class^="col-"] {
+        // background-color: rgb(168, 116, 97);
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+}
